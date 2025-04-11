@@ -355,7 +355,7 @@ Resources:
       ServiceRole: !GetAtt ShahCodeBuildRole.Arn
       Artifacts:
         Type: S3
-        Location: !Sub shah-codepipeline-artifacts-${AWS::AccountId}
+        Location: shah-codepipeline-artifacts-484907526019
         Name: BuildArtifact
         NamespaceType: NONE
         Packaging: ZIP
