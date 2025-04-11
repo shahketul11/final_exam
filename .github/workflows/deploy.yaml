@@ -25,5 +25,5 @@ jobs:
       - name: Build, Tag, and Push image to ECR
         run: |
           docker build -t shah-api .
-          docker tag borda-api:latest 484907526019.dkr.ecr.us-east-1.amazonaws.com/shah-api:latest
+          docker tag shah-api:latest 484907526019.dkr.ecr.us-east-1.amazonaws.com/shah-api:latest
           docker push 484907526019.dkr.ecr.us-east-1.amazonaws.com/shah-api:latest
