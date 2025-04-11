@@ -4,10 +4,11 @@ Description: Shah Assignment 3 - AWS ECS Fargate Deployment with CI/CD (Updated 
 Parameters:
   GitHubOwner:
     Type: String
+    Default: shahketul11
     Description: Your GitHub username
   GitHubRepo:
     Type: String
-    Default: final
+    Default: final_exam
     Description: GitHub repository name
   GitHubBranch:
     Type: String
@@ -241,7 +242,7 @@ Resources:
       ExecutionRoleArn: !GetAtt ShahTaskExecutionRole.Arn
       ContainerDefinitions:
         - Name: shah-container
-          Image: !Sub ${AWS::AccountId}.dkr.ecr.ca-central-1.amazonaws.com/shah-ecr:latest
+          Image: !Sub ${AWS::AccountId}.dkr.ecr.us-east-1.amazonaws.com/shah-ecr:latest
           PortMappings:
             - ContainerPort: 5000
           Essential: true
